@@ -1,8 +1,8 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import api from './api.js';
-import { port } from './config.js';
+const express = require('express');
+const morgan = require('morgan')
+const cors = require('cors');
+const api = require('./api.js');
+const { port } = require( './config.js');
 
 const app = express();
 app.use(express.json());
@@ -25,4 +25,4 @@ const listener = app.listen(port, () => {
   console.log(`Listening on port ${listener.address().port}`);
 });
 
-export default app; // for testing
+module.exports = app; // for testing

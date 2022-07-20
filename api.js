@@ -1,9 +1,15 @@
-import express from 'express';
-import ethers from 'ethers';
-import hcaptcha from 'hcaptcha';
-import { validatorKey, hcaptchaSecret } from './config.js';
+const express = require('express');
+const ethers = require('ethers')
+const {verify} = require('hcaptcha');
+const TronWeb = require('tronweb');
+const { validatorKey, hcaptchaSecret } = require( './config.js');
 
-const wallet = new ethers.Wallet(validatorKey);
+const tronWeb = new TronWeb({
+  fullNode: 'https://api.trongrid.io',
+  solidityNode: 'https://api.trongrid.io',
+  eventServer: 'https://api.trongrid.io',
+  privateKey: validatorKey.slice(2)
+});
 
 const api = express.Router();
 
@@ -17,7 +23,7 @@ api
     try {
       const { data, token } = req.body;
 
-      const result = await hcaptcha.verify(hcaptchaSecret, token);
+      const result = await verify(hcaptchaSecret, token);
       const { success, challenge_ts } = result;
       if (!success) {
         res.sendStatus(400);
@@ -34,9 +40,7 @@ api
       const hash = ethers.utils.keccak256(
         ethers.utils.hexConcat([data, timestamp])
       );
-      const validatorSignature = await wallet.signMessage(
-        ethers.utils.arrayify(hash)
-      );
+      const validatorSignature = await tronWeb.trx.sign(hash);
 
       const proof = ethers.utils.hexConcat([
         data,
@@ -51,4 +55,4 @@ api
   })
   .all(methodNotAllowed);
 
-export default api;
+module.exports = api;

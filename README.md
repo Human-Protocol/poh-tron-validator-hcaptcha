@@ -1,6 +1,6 @@
-# Proof-of-Humanity hCaptcha Validator API
+# Proof-of-Humanity hCaptcha Validator API for TRON
 
-[![Docker](https://img.shields.io/docker/pulls/bakoushin/poh-validator-hcaptcha)](https://hub.docker.com/r/bakoushin/poh-validator-hcaptcha)
+[![Docker](https://img.shields.io/docker/pulls/bakoushin/poh-tron-validator-hcaptcha)](https://hub.docker.com/r/bakoushin/poh-tron-validator-hcaptcha)
 
 Validator API exposes a single endpoint `/api/v1/proof`.
 
@@ -24,14 +24,14 @@ docker run -it \
   --env PORT=8080 \
   --env VALIDATOR_KEY=0x89c821ae8f9abcd0737f910e3de1904699df9e390a9f184f01f941e20dac8a52 \
   --env HCAPTCHA_SECRET=0x0000000000000000000000000000000000000000 \
-  bakoushin/poh-validator-hcaptcha
+  bakoushin/poh-tron-validator-hcaptcha
 ```
 
 ### As a Node project
 
 ```bash
 git clone https://github.com/bakoushin/poh-validator-hcaptcha-api.git
-cd poh-validator-hcaptcha
+cd poh-tron-validator-hcaptcha
 npm install
 npm start
 ```
@@ -57,11 +57,11 @@ curl -X POST http://localhost:8080/api/v1/proof \
 ## See also
 
 - [Proof-of-HUMANity on-chain: protect your smart contracts from bots](https://www.humanprotocol.org/blog/proof-of-humanity-on-chain-protect-your-smart-contracts-from-bots)
-- [Proof-of-Humanity-React](https://npmjs.com/packages/poh-react)
+- [Proof-of-Humanity TRON hCaptcha Validator API (Docker)](https://hub.docker.com/r/bakoushin/poh-tron-validator-hcaptcha)
+- [Proof-of-Humanity Solidity Contracts for TRON](https://npmjs.com/package/poh-tron-contracts)
+- [Proof-of-Humanity TRON React](https://npmjs.com/packages/poh-tron-react)
 - [Proof-of-Humanity hCaptcha Validator React](https://npmjs.com/package/poh-validator-hcaptcha-react)
-- [Proof-of-Humanity hCaptcha Validator API](https://hub.docker.com/r/bakoushin/poh-validator-hcaptcha)
-- [Proof-of-Humanity Solidity Contracts](https://npmjs.com/package/poh-contracts)
-- [Counter dApp Example](https://github.com/bakoushin/poh-counter-example)
+- [Counter dApp Example for TRON](https://github.com/bakoushin/poh-tron-counter-example)
 
 ## Author
 

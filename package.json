@@ -1,15 +1,15 @@
 {
-  "name": "poh-validator-hcaptcha-api",
+  "name": "poh-tron-validator-hcaptcha-api",
   "version": "0.0.1",
-  "description": "Proof-of-Humanity hCaptcha Validator API",
+  "description": "Proof-of-Humanity for TRON hCaptcha Validator API",
   "main": "index.js",
-  "type": "module",
+  "type":"commonjs",
   "scripts": {
     "start": "cross-env NODE_ENV=production node -r dotenv/config index.js",
     "docker": "NODE_ENV=production node index.js",
     "dev": "nodemon -r dotenv/config --inspect index.js",
-    "docker-build": "docker build -t bakoushin/poh-validator-hcaptcha .",
-    "docker-publish": "docker push bakoushin/poh-validator-hcaptcha",
+    "docker-build": "docker build -t bakoushin/poh-tron-validator-hcaptcha --platform linux/amd64 .",
+    "docker-publish": "docker push bakoushin/poh-tron-validator-hcaptcha",
     "test": "env-cmd -f ./.env.test mocha --exit test/**/*.js"
   },
   "keywords": [
@@ -18,10 +18,19 @@
     "proof",
     "api",
     "sever",
-    "hCaptcha"
+    "hCaptcha",
+    "TRON"
   ],
   "author": "Alex Bakoushin <alex@bakoush.in>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api/issues"
+  },
+  "homepage": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api#readme",
   "dependencies": {
     "cors": "2.8.5",
     "cross-env": "7.0.3",
@@ -29,7 +38,8 @@
     "ethers": "5.6.4",
     "express": "4.17.3",
     "hcaptcha": "0.1.1",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "tronweb": "4.2.0"
   },
   "devDependencies": {
     "chai": "4.3.6",

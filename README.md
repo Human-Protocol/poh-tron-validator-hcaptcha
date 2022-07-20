@@ -58,7 +58,7 @@ curl -X POST http://localhost:8080/api/v1/proof \
 
 - [Proof-of-HUMANity on-chain: protect your smart contracts from bots](https://www.humanprotocol.org/blog/proof-of-humanity-on-chain-protect-your-smart-contracts-from-bots)
 - [Proof-of-Humanity TRON hCaptcha Validator API (Docker)](https://hub.docker.com/r/bakoushin/poh-tron-validator-hcaptcha)
-- [Proof-of-Humanity Solidity Contracts for TRON](https://npmjs.com/package/poh-tron-contracts)
+- [Proof-of-Humanity TRON Solidity Contracts](https://npmjs.com/package/poh-tron-contracts)
 - [Proof-of-Humanity TRON React](https://npmjs.com/packages/poh-tron-react)
 - [Proof-of-Humanity hCaptcha Validator React](https://npmjs.com/package/poh-validator-hcaptcha-react)
 - [Counter dApp Example for TRON](https://github.com/bakoushin/poh-tron-counter-example)

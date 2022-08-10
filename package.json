@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api.git"
+    "url": "https://github.com/Human-Protocol/poh-tron-validator-hcaptcha-api.git"
   },
   "bugs": {
-    "url": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api/issues"
+    "url": "https://github.com/Human-Protocol/poh-tron-validator-hcaptcha-api/issues"
   },
-  "homepage": "https://github.com/bakoushin/poh-tron-validator-hcaptcha-api#readme",
+  "homepage": "https://github.com/Human-Protocol/poh-tron-validator-hcaptcha-api#readme",
   "dependencies": {
     "cors": "2.8.5",
     "cross-env": "7.0.3",

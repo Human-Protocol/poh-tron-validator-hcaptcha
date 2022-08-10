@@ -30,7 +30,7 @@ docker run -it \
 ### As a Node project
 
 ```bash
-git clone https://github.com/bakoushin/poh-validator-hcaptcha-api.git
+git clone https://github.com/Human-Protocol/poh-validator-hcaptcha-api.git
 cd poh-tron-validator-hcaptcha
 npm install
 npm start
@@ -61,7 +61,7 @@ curl -X POST http://localhost:8080/api/v1/proof \
 - [Proof-of-Humanity TRON Solidity Contracts](https://npmjs.com/package/poh-tron-contracts)
 - [Proof-of-Humanity TRON React](https://npmjs.com/packages/poh-tron-react)
 - [Proof-of-Humanity hCaptcha Validator React](https://npmjs.com/package/poh-validator-hcaptcha-react)
-- [Counter dApp Example for TRON](https://github.com/bakoushin/poh-tron-counter-example)
+- [Counter dApp Example for TRON](https://github.com/Human-Protocol/poh-tron-counter-example)
 
 ## Author
 
